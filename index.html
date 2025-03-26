@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="menu">
+        <h1>Welcome to Sudoku</h1>
+        <button onclick="showSolver()">Sudoku Solver</button>
+        <button onclick="showGame()">Play Sudoku</button>
+    </div>
+    
+    <div id="game-container" style="display: none;">
+        <h1>Sudoku Game</h1>
+        <div class="options">
+            <button onclick="generatePuzzle('easy')">Play (Easy)</button>
+            <button onclick="generatePuzzle('medium')">Play (Medium)</button>
+            <button onclick="generatePuzzle('hard')">Play (Hard)</button>
+        </div>
+        
+        <table>
+            <tbody id="sudoku-grid"></tbody>
+        </table>
+
+        <div class="buttons">
+            <button onclick="submitSudoku()">Submit</button>
+            <button onclick="getHint()">Hint</button>
+            <button onclick="undoMove()">Undo</button>
+            <button onclick="clearGrid()">Clear</button>
+        </div>
+    </div>
+
+    <div id="solver-container" style="display: none;">
+        <h1>Sudoku Solver</h1>
+        <table>
+            <tbody id="sudoku-grid-solver"></tbody>
+        </table>
+        <div class="buttons">
+            <button onclick="solveSudoku()">Solve</button>
+            <button onclick="clearGrid()">Clear</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
